@@ -8,6 +8,7 @@ while keep_adding:
         #Sort list into alphabetical or numerical order and then print list
         for i in range(len(list)):
             list = (sorted(list))
+            #F strings  convert input into variables by using curly brackets, anything inside curly brackets gets turned into the vairable
             print(f"{i+1}. {list[i]}")
         keep_adding = False
     #Dont allow blank inputs
