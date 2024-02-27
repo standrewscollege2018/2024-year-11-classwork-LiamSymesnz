@@ -12,8 +12,8 @@ while prize_worth:
 money = True
 while money:
     try:
-        prize_money = int(input("Enter how much the prize is worth! "))
-        if prize_money <=0:
+        prize_money = float(input("Enter how much the prize is worth! "))
+        if prize_money <= 0:
             print("Enter a positive number genius ")
         else:
             money = False
@@ -25,11 +25,14 @@ while person_asking:
 
     name = str(input("Enter someone to add to the raffle, say 'done' to end! "))
     if name.lower() == "done":
-        person_asking = False
-        winner = random.randint(0, len(person) - 1)
-        print(f"The person who won the raffle was {person[winner]}")
-        prize_money = str(prize_money)
-        print(("The value of the prize was ") + (prize_money))
+        if len(person) == (0):
+            print("You need to enter some participants ")
+        else:
+            person_asking = False
+            winner = random.randint(0, len(person) - 1)
+            print(f"The person who won the raffle was {person[winner]}")
+            prize_money = str(prize_money)
+            print(("The value of the prize was ") + (prize_money))
     elif not name.isalpha():
         print("Enter only letters! ")
 
