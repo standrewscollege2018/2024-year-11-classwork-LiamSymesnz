@@ -38,7 +38,7 @@ while still_ordering:
                 cars_available[chosen - 1][2] = "Not Available"
                 name = input("What is your name? ")
                 cars_available.append(name[chosen-1])
-                #print("Thanks for renting a car today " + {cars_available[chosen-1][4]})
+                print("Thanks for renting a car today " + {cars_available[chosen][4]})
                 for i in range(len(cars_available)):
                     print(f"{i+1}. {cars_available[i][0]}  {cars_available[i][1]}  {cars_available[i][2]}")
                 time.sleep(.8)
